@@ -8,8 +8,8 @@ class Extractor:
 
     def extract_ne(self, sentence: str) -> List[str]:
         doc = self.nlp(sentence)
-        return [X.text for X in doc.ents]
+        return list(set([X.text for X in doc.ents if X.label_ not in ["CARDINAL", "PERCENT"]]))
 
     def extract_task(self, sentence: str) -> List[str]:
-        return [task for task in NLP_TASKS if task in sentence]
+        return list(set([task for task in NLP_TASKS if task in sentence]))
 
