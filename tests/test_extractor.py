@@ -32,7 +32,7 @@ class TestExtractor:
 
     class TestExtractNe:
         def test_nlp要素を含む複文からエンティティのリストを返却する(self, extractor_class, sentence_example):
-            assert 'BERT' in extractor_class.extract_ne(sentence_example)
+            assert 'ELECTRA' in extractor_class.extract_ne(sentence_example)
 
     class TestExtractTasks:
         def test_nlpタスクを含む複文からnlpタスクのリストを返却する(self, extractor_class, sentence_example):
