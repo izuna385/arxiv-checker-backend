@@ -6,6 +6,9 @@ import pdb
 from arxiv import Result
 
 class ArxivApiClass:
+    '''
+    arXiv APIを叩く部分を受け持つクラス
+    '''
     def __init__(self, max_paper_num_per_call: int = 30):
         self.max_paper_num_per_call = max_paper_num_per_call
         self.conferences = self._nlp_conference_list_creator()
@@ -37,7 +40,18 @@ class ArxivApiClass:
         :param max_results:
         :return:
         '''
-        # '(co="ACL2020" OR co:"ACL 2020") AND cat:cs.CL'
         search_query = '(' + ' OR '.join(["co=" + "'" + conference + "'" for conference in self.conferences]) + \
                        ') AND cat:cs.CL'
         return [paper for paper in arxiv.Search(query=search_query, max_results=max_results).results()]
+
+    def extract_title_and_summary_and_comment_from_paper(self, paper: Result) -> Dict:
+        '''
+        Resultクラスから不要な情報を除き、title, abstract, commentのみを返却する
+        :param paper:
+        :return:
+        '''
+        return {
+            "title": paper.title,
+            "summary": paper.summary,
+            "comment": paper.comment
+        }
