@@ -1,0 +1,39 @@
+Automatic speech recognition
+CCG
+Common sense
+Constituency parsing
+Coreference resolution
+Data-to-Text Generation
+Dependency parsing
+Dialogue
+Domain adaptation
+Entity linking
+Grammatical error correction
+Information extraction
+Intent Detection 
+Slot Filling
+Language modeling
+Lexical normalization
+Machine translation
+Missing elements
+Multi-task learning
+Multi-modal
+Named entity recognition
+Natural language inference
+Part-of-speech tagging
+Paraphrase Generation
+Question answering
+Relation prediction
+Relationship extraction
+Semantic textual similarity
+Semantic parsing
+Semantic role labeling
+Sentiment analysis
+Shallow syntax
+Simplification
+Stance detection
+Summarization
+Taxonomy learning
+Temporal processing
+Text classification
+Word sense disambiguation
