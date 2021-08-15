@@ -1,9 +1,19 @@
 import uvicorn
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 from backend.arxiv_api import ArxivApiClass
 from backend.extractor import Extractor
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
 arxiv_api = ArxivApiClass()
 extractor = Extractor()
 
