@@ -3,8 +3,8 @@ This is an API to return accepted papers related to natural language processing 
 
 ## build
 ```Dockerfile
-$ docker build -t arxiv_checker:latest .
-$ docker run -d --rm --name arxiv_checker_debug -it -v ${PWD}:/projects -p 8000:8000 arxiv_checker
+$ docker build -t arxiv_checker_backend:latest .
+$ docker run -d --rm --name arxiv_checker_backend_debug -it -v ${PWD}:/projects -p 8000:8000 arxiv_checker_backend
 $ docker ps -a|grep arxiv_checker_debug
 ```
 
